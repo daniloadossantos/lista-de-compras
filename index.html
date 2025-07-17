@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <div class="logo-icon">≡</div>
+          <div class="logo-text">quicklist</div>
+        </div>
+      </div>
+
+      <a href="#" class="back-button">
+        ← Voltar
+      </a>
+
+      <h1 class="page-title">Compras da semana</h1>
+
+      <div class="add-item-section">
+        <input type="text" class="add-input" placeholder="Adicione um novo item" id="newItemInput">
+        <button class="add-button">Adicionar item</button>
+      </div>
+
+      <div class="items-list" id="itemsList">
+        <div class="item">
+          <input type="checkbox" class="item-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Pão de forma</span>
+          <button class="delete-button" onclick="deleteItem(this)">🗑️</button>
+        </div>
+        <div class="item">
+          <input type="checkbox" class="item-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Café preto</span>
+          <button class="delete-button" onclick="deleteItem(this)">🗑️</button>
+        </div>
+        <div class="item">
+          <input type="checkbox" class="item-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Suco de laranja</span>
+          <button class="delete-button" onclick="deleteItem(this)">🗑️</button>
+        </div>
+        <div class="item">
+          <input type="checkbox" class="item-checkbox" onchange="toggleItem(this)">
+          <span class="item-text">Bolacha</span>
+          <button class="delete-button" onclick="deleteItem(this)">🗑️</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="notification" id="notification">
+      <span>🔴 O item foi removido da lista</span>
+      <button class="notification-close" onclick="hideNotification()">×</button>
+    </div>
+
+    <!-- Modal de erro no input-->
+    <div class="modal-overlay" id="errorModal">
+      <div class="modal">
+        <div class="modal-header">
+          <div class="modal-icon">!</div>
+          <h3 class="modal-title">Erro</h3>
+        </div>
+        <div class="modal-content">
+          <p class="modal-text">Insira um conteúdo válido.</p>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-button" onclick="hideErrorModal()">OK</button>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+
+
+  <footer>
+
+  </footer>
+
+
+  <script src="script.js" async defer></script>
+</body>
+
+</html>
